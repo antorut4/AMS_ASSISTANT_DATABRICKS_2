@@ -1,0 +1,2 @@
+# Manifest Databricks Apps. Le credenziali del service principal le inietta il runtime.
+command: ["python", "app.py"]
