@@ -1,0 +1,17 @@
+# Pin ESATTO, non un range: il blocco CSS di gr.Chatbot in app.py dipende dai
+# nomi di classe interni del frontend, che cambiano tra le versioni di Gradio.
+# 4.44.1 è l'ultima della serie 4 e la versione su cui quei selettori sono stati
+# verificati; gradio_client 1.3.0 è la dipendenza dichiarata da gradio 4.44.1.
+gradio==4.44.1
+gradio_client==1.3.0
+databricks-sdk>=0.30
+databricks-sql-connector>=3.4
+databricks-vectorsearch>=0.40
+pandas>=2.0
+requests>=2.31
+openai>=1.40
+pypdf>=4.2
+python-docx>=1.1
+python-pptx>=0.6
+openpyxl>=3.1
+tzdata>=2024.1
