@@ -1,0 +1,21 @@
+# Manifest Databricks Apps — progetto ENI NDP.
+#
+# Databricks Apps legge SEMPRE un file di nome app.yaml. Questo file è quindi la
+# variante da usare sul workspace NDP, in uno di questi due modi:
+#
+#   a) nel workspace NDP, rinomina/copia questo file su app.yaml prima del
+#      deploy (il repository resta uno solo, la differenza è un file);
+#   b) lascia app.yaml com'è e sovrascrivi le tre variabili qui sotto nelle App
+#      Settings dell'App NDP: hanno la precedenza sull'app.yaml.
+#
+# La via (b) è la più comoda se i due workspace sincronizzano lo stesso branch,
+# perché non richiede di tenere due file allineati.
+command: ["python", "app.py"]
+
+env:
+  - name: APP__STORAGE__SCHEMA
+    value: "p_dpp_core.amdb"
+  - name: APP__COMPUTE__WAREHOUSE_ID
+    value: "007bcac6559a6a6b"
+  - name: APP__COMPUTE__DEFAULT_HOST
+    value: "https://adb-8729215796334102.2.azuredatabricks.net"

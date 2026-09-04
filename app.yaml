@@ -1,0 +1,23 @@
+# Manifest Databricks Apps — progetto KIKO Cosmetics.
+# Le credenziali del service principal le inietta il runtime.
+command: ["python", "app.py"]
+
+# DOVE SI TROVA QUESTA INSTALLAZIONE. Sono le uniche tre chiavi che non possono
+# stare nella tabella delle impostazioni, perché servono per raggiungerla.
+# Tutto il resto (team, ServiceNow, schemi esplorabili, branding, RAG…) si
+# imposta dal pannello Impostazioni e vive in <schema>.app_config.
+#
+# Questo blocco lo legge anche app.py all'import, quindi vale pure fuori
+# dall'App — per esempio in un notebook, dove si esegue il bootstrap: non serve
+# ripetere le variabili a mano. Ciò che è già nell'ambiente non viene toccato,
+# quindi nell'App vince sempre quello che inietta la piattaforma.
+#
+# Per un ALTRO ambiente: vedi app-ndp.yaml, oppure sovrascrivi queste tre
+# variabili nelle App Settings del workspace, che hanno la precedenza.
+env:
+  - name: APP__STORAGE__SCHEMA
+    value: "prod_user_t4v_data"
+  - name: APP__COMPUTE__WAREHOUSE_ID
+    value: "08fc303fb22cc2bb"
+  - name: APP__COMPUTE__DEFAULT_HOST
+    value: "https://dbc-256e0b12-39b5.cloud.databricks.com"
