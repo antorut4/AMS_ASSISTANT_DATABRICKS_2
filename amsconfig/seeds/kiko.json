@@ -1,0 +1,50 @@
+{
+  "_meta": {
+    "tenant": "kiko",
+    "kind": "configurazione iniziale del progetto",
+    "note": "Applicalo una volta con «python app.py config seed» oppure dal pannello Impostazioni > Importa JSON. Da quel momento i valori vivono nella tabella app_config e questo file non serve più."
+  },
+  "values": {
+    "servicenow.enabled": true,
+    "servicenow.base_url": "https://kiko.service-now.com/api/now/table",
+    "servicenow.assignment_group_ids": [
+      "f1864b9cdbaf185012e52dcb0b961915",
+      "f8599b50fbce7210ae27f882beefdcad"
+    ],
+    "team.members": [
+      "Marcello Porreca",
+      "Gemma Piccirillo",
+      "Chiara Scoccimarro",
+      "Antonio Ruta"
+    ],
+    "agent_tools.explorable_schemas": [
+      "prod_common_silver",
+      "prod_common_bronze",
+      "prod_kiko_silver",
+      "prod_kiko_bronze",
+      "prod_kiko_gold",
+      "prod_ops_silver",
+      "prod_ops_bronze",
+      "prod_ops_gold",
+      "prod_eva_bronze",
+      "prod_eva_integration",
+      "prod_partner_silver",
+      "prod_partner_bronze",
+      "prod_user_t4v_data",
+      "prod_user_crm_data",
+      "prod_user_rtl_data"
+    ],
+    "agent_tools.allowed_workspace_paths": [
+      "/Workspace/PROD_",
+      "/Workspace/DEV_",
+      "/Workspace/Shared"
+    ],
+    "agent_tools.etl_roots": [
+      "/Workspace/PROD_COMMON/ETL",
+      "/Workspace/PROD_KIKO/ETL",
+      "/Workspace/PROD_OPS/ETL",
+      "/Workspace/PROD_EVA/ETL"
+    ],
+    "branding.header_subtitle": "KIKO Cosmetics · Datalake Operations · Databricks"
+  }
+}

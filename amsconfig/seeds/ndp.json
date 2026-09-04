@@ -1,0 +1,32 @@
+{
+  "_meta": {
+    "tenant": "ndp",
+    "kind": "configurazione iniziale del progetto",
+    "note": "Applicalo una volta con «python app.py config seed» oppure dal pannello Impostazioni > Importa JSON. Da quel momento i valori vivono nella tabella app_config e questo file non serve più."
+  },
+  "values": {
+    "servicenow.assignment_group_ids": [
+      "",
+      ""
+    ],
+    "team.members": [
+      ""
+    ],
+    "agent_tools.explorable_schemas": [
+      "p_dpp_core.curateddb",
+      "p_dpp_core.stagingdb",
+      "p_dpp_core.structuredtargetdb",
+      "p_dpp_core.structuredstagingdb",
+      "p_dpp_core.strutturato",
+      "p_dpp_core.auxdb",
+      "p_dpp_core.aud",
+      "p_dpp_core.transactionalstagingdb",
+      "p_dpp_core.transactionalmetricdb",
+      "p_dpp_core.transactionalinterface",
+      "p_dpp_core.transactionalauxdb",
+      "p_dpp_core.metrichetransazionali",
+      "p_dpp_core.datagaragel2"
+    ],
+    "branding.header_subtitle": "ENI NDP · Databricks"
+  }
+}
